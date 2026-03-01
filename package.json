@@ -1,0 +1,20 @@
+{
+	"name": "@zentra/counter-channel-plugin",
+	"version": "1.0.6",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite",
+		"package": "zentra-plugin package"
+	},
+	"dependencies": {
+		"@zentra/plugin-sdk": "file:../plugin-sdk"
+	},
+	"devDependencies": {
+		"@sveltejs/vite-plugin-svelte": "5.1.1",
+		"svelte": "5.48.5",
+		"typescript": "5.9.3",
+		"vite": "6.4.1"
+	}
+}
