@@ -4,6 +4,13 @@
 	"version": "2.0.0",
 	"description": "Adds a shared click counter channel type synced by channel messages",
 	"author": "Zentra",
+	"requestedPermissions": [
+		"ReadMessages",
+		"SendMessages",
+		"ReadChannels",
+		"AddChannelTypes"
+	],
+	"icon": "assets/icon.svg",
 	"channelTypes": ["counter-click"],
 	"commands": [],
 	"triggers": [],
