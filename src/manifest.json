@@ -1,7 +1,7 @@
 {
 	"slug": "counter-channel",
 	"name": "Counter Channel",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Adds a shared click counter channel type synced by channel messages",
 	"author": "Zentra",
 	"requestedPermissions": [
