@@ -12,12 +12,6 @@ importers:
         specifier: file:../plugin-sdk
         version: file:../plugin-sdk(svelte@5.48.5)
     devDependencies:
-      '@sveltejs/vite-plugin-svelte':
-        specifier: 5.1.1
-        version: 5.1.1(svelte@5.48.5)(vite@6.4.1)
-      svelte:
-        specifier: 5.48.5
-        version: 5.48.5
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -342,21 +336,6 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
-  '@sveltejs/vite-plugin-svelte-inspector@4.0.1':
-    resolution: {integrity: sha512-J/Nmb2Q2y7mck2hyCX4ckVHcR5tu2J+MtBEQqpDrrgELZ2uvraQcK/ioCV61AqkdXFgriksOKIceDcQmqnGhVw==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22}
-    peerDependencies:
-      '@sveltejs/vite-plugin-svelte': ^5.0.0
-      svelte: ^5.0.0
-      vite: ^6.0.0
-
-  '@sveltejs/vite-plugin-svelte@5.1.1':
-    resolution: {integrity: sha512-Y1Cs7hhTc+a5E9Va/xwKlAJoariQyHY+5zBgCZg4PFWNYQ1nMN9sjK1zhw1gK69DuqVP++sht/1GZg1aRwmAXQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22}
-    peerDependencies:
-      svelte: ^5.0.0
-      vite: ^6.0.0
-
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
@@ -365,6 +344,9 @@ packages:
     hasBin: true
     peerDependencies:
       svelte: ^5.0.0
+    peerDependenciesMeta:
+      svelte:
+        optional: true
 
   acorn@8.16.0:
     resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
@@ -382,19 +364,6 @@ packages:
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
-
-  debug@4.4.3:
-    resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
-  deepmerge@4.3.1:
-    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
-    engines: {node: '>=0.10.0'}
 
   devalue@5.6.3:
     resolution: {integrity: sha512-nc7XjUU/2Lb+SvEFVGcWLiKkzfw8+qHI7zn8WYXKkLMgfGSHbgCEaR6bJpev8Cm6Rmrb19Gfd/tZvGqx9is3wg==}
@@ -430,18 +399,11 @@ packages:
   is-reference@3.0.3:
     resolution: {integrity: sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==}
 
-  kleur@4.1.5:
-    resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
-    engines: {node: '>=6'}
-
   locate-character@3.0.0:
     resolution: {integrity: sha512-SW13ws7BjaeJ6p7Q6CO2nchbYEc3X3J6WrmTTDto7yMPqVSZTUyY5Tjbid+Ab8gLnATtygYtiDIJGQRRn2ZOiA==}
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
-
-  ms@2.1.3:
-    resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
@@ -519,14 +481,6 @@ packages:
       tsx:
         optional: true
       yaml:
-        optional: true
-
-  vitefu@1.1.2:
-    resolution: {integrity: sha512-zpKATdUbzbsycPFBN71nS2uzBUQiVnFoOrr2rvqv34S1lcAgMKKkjWleLGeiJlZ8lwCXvtWaRn7R3ZC16SYRuw==}
-    peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-beta.0
-    peerDependenciesMeta:
-      vite:
         optional: true
 
   zimmerframe@1.1.4:
@@ -616,20 +570,25 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
       '@jridgewell/trace-mapping': 0.3.31
+    optional: true
 
   '@jridgewell/remapping@2.3.5':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
+    optional: true
 
-  '@jridgewell/resolve-uri@3.1.2': {}
+  '@jridgewell/resolve-uri@3.1.2':
+    optional: true
 
-  '@jridgewell/sourcemap-codec@1.5.5': {}
+  '@jridgewell/sourcemap-codec@1.5.5':
+    optional: true
 
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+    optional: true
 
   '@rollup/rollup-android-arm-eabi@4.59.0':
     optional: true
@@ -709,51 +668,30 @@ snapshots:
   '@sveltejs/acorn-typescript@1.0.9(acorn@8.16.0)':
     dependencies:
       acorn: 8.16.0
-
-  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.48.5)(vite@6.4.1))(svelte@5.48.5)(vite@6.4.1)':
-    dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.1.1(svelte@5.48.5)(vite@6.4.1)
-      debug: 4.4.3
-      svelte: 5.48.5
-      vite: 6.4.1
-    transitivePeerDependencies:
-      - supports-color
-
-  '@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.48.5)(vite@6.4.1)':
-    dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.48.5)(vite@6.4.1))(svelte@5.48.5)(vite@6.4.1)
-      debug: 4.4.3
-      deepmerge: 4.3.1
-      kleur: 4.1.5
-      magic-string: 0.30.21
-      svelte: 5.48.5
-      vite: 6.4.1
-      vitefu: 1.1.2(vite@6.4.1)
-    transitivePeerDependencies:
-      - supports-color
+    optional: true
 
   '@types/estree@1.0.8': {}
 
   '@zentra/plugin-sdk@file:../plugin-sdk(svelte@5.48.5)':
     dependencies:
       fflate: 0.8.2
+    optionalDependencies:
       svelte: 5.48.5
 
-  acorn@8.16.0: {}
+  acorn@8.16.0:
+    optional: true
 
-  aria-query@5.3.1: {}
+  aria-query@5.3.1:
+    optional: true
 
-  axobject-query@4.1.0: {}
+  axobject-query@4.1.0:
+    optional: true
 
-  clsx@2.1.1: {}
+  clsx@2.1.1:
+    optional: true
 
-  debug@4.4.3:
-    dependencies:
-      ms: 2.1.3
-
-  deepmerge@4.3.1: {}
-
-  devalue@5.6.3: {}
+  devalue@5.6.3:
+    optional: true
 
   esbuild@0.25.12:
     optionalDependencies:
@@ -784,11 +722,13 @@ snapshots:
       '@esbuild/win32-ia32': 0.25.12
       '@esbuild/win32-x64': 0.25.12
 
-  esm-env@1.2.2: {}
+  esm-env@1.2.2:
+    optional: true
 
   esrap@2.2.3:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
+    optional: true
 
   fdir@6.5.0(picomatch@4.0.3):
     optionalDependencies:
@@ -802,16 +742,15 @@ snapshots:
   is-reference@3.0.3:
     dependencies:
       '@types/estree': 1.0.8
+    optional: true
 
-  kleur@4.1.5: {}
-
-  locate-character@3.0.0: {}
+  locate-character@3.0.0:
+    optional: true
 
   magic-string@0.30.21:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
-
-  ms@2.1.3: {}
+    optional: true
 
   nanoid@3.3.11: {}
 
@@ -875,6 +814,7 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.21
       zimmerframe: 1.1.4
+    optional: true
 
   tinyglobby@0.2.15:
     dependencies:
@@ -894,8 +834,5 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitefu@1.1.2(vite@6.4.1):
-    optionalDependencies:
-      vite: 6.4.1
-
-  zimmerframe@1.1.4: {}
+  zimmerframe@1.1.4:
+    optional: true

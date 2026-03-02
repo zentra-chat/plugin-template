@@ -1,14 +1,12 @@
-import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { defineConfig } from 'vite';
 
+// Plugin builds produce a single ES module that runs inside a sandboxed iframe.
+// No framework-specific plugins needed — use whatever you want (or nothing).
+// If you want to use Svelte/React/Vue, add the appropriate vite plugin here.
 export default defineConfig({
-	plugins: [svelte({
-		compilerOptions: {
-			customElement: true
-		}
-	})],
 	resolve: {
 		alias: {
+			'@zentra/plugin-sdk/bridge': new URL('../plugin-sdk/src/bridge.ts', import.meta.url).pathname,
 			'@zentra/plugin-sdk/runtime': new URL('../plugin-sdk/src/runtime.ts', import.meta.url).pathname,
 			'@zentra/plugin-sdk': new URL('../plugin-sdk/src', import.meta.url).pathname
 		}
